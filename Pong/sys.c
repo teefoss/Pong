@@ -105,6 +105,7 @@ void StartSDL(void)
 	goal = Mix_LoadWAV("goal.wav");
 	if (!tophit || !padhit || !goal)
 	{
+        // as you gain more and more sounds it's gonna be a bit annoying to figure out which one is missing manually, but it's not bad yet
 		PrintSDLError("Could not load sound!");
 		SDL_Quit();
 		exit(1);

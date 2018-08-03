@@ -67,6 +67,8 @@ bool tfRectCollision(rect_t *aRect, rect_t *bRect)
 	box_t abox, bbox;
 	bool xaligned, yaligned;
 	
+    // I think this collision checking only works if the ball has a speed of 1, we'd need something a bit smarter if
+    // the ball goes faster
 	MakeBoxFromRect(&abox, aRect);
 	MakeBoxFromRect(&bbox, bRect);
 	xaligned = !(abox.top >= bbox.bottom || abox.bottom <= bbox.top);
