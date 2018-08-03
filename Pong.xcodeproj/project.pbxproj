@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		30525CAC210BA7CA00ADEDA1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 30525CAB210BA7CA00ADEDA1 /* main.c */; };
+		30525CB4210BA80600ADEDA1 /* sys.c in Sources */ = {isa = PBXBuildFile; fileRef = 30525CB2210BA80500ADEDA1 /* sys.c */; };
+		30525CB8210BA98A00ADEDA1 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30525CB6210BA98A00ADEDA1 /* SDL2.framework */; };
+		30525CB9210BA98A00ADEDA1 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30525CB7210BA98A00ADEDA1 /* SDL2_ttf.framework */; };
+		30525CBD210BB32300ADEDA1 /* tffunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 30525CBC210BB32300ADEDA1 /* tffunctions.c */; };
+		309D4C4121101144001C3039 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309D4C4021101144001C3039 /* SDL2_mixer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		30525CA8210BA7CA00ADEDA1 /* Pong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pong; sourceTree = BUILT_PRODUCTS_DIR; };
 		30525CAB210BA7CA00ADEDA1 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		30525CB2210BA80500ADEDA1 /* sys.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sys.c; sourceTree = "<group>"; };
+		30525CB3210BA80600ADEDA1 /* sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sys.h; sourceTree = "<group>"; };
+		30525CB6210BA98A00ADEDA1 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		30525CB7210BA98A00ADEDA1 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		30525CBB210BB32300ADEDA1 /* tffunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tffunctions.h; sourceTree = "<group>"; };
+		30525CBC210BB32300ADEDA1 /* tffunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tffunctions.c; sourceTree = "<group>"; };
+		30525CBF210BDF2400ADEDA1 /* Px437_IBM_VGA9.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Px437_IBM_VGA9.ttf; sourceTree = "<group>"; };
+		309D4C3F2110112D001C3039 /* goal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = goal.wav; sourceTree = "<group>"; };
+		309D4C4021101144001C3039 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		309D4C422110B0DB001C3039 /* tophit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tophit.wav; sourceTree = "<group>"; };
+		309D4C432110B0DB001C3039 /* padhit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = padhit.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309D4C4121101144001C3039 /* SDL2_mixer.framework in Frameworks */,
+				30525CB8210BA98A00ADEDA1 /* SDL2.framework in Frameworks */,
+				30525CB9210BA98A00ADEDA1 /* SDL2_ttf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +60,10 @@
 		30525C9F210BA7CA00ADEDA1 = {
 			isa = PBXGroup;
 			children = (
+				30525CBE210BDE9500ADEDA1 /* Assetts */,
 				30525CAA210BA7CA00ADEDA1 /* Pong */,
 				30525CA9210BA7CA00ADEDA1 /* Products */,
+				30525CB5210BA98900ADEDA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +79,33 @@
 			isa = PBXGroup;
 			children = (
 				30525CAB210BA7CA00ADEDA1 /* main.c */,
+				30525CB3210BA80600ADEDA1 /* sys.h */,
+				30525CB2210BA80500ADEDA1 /* sys.c */,
+				30525CBB210BB32300ADEDA1 /* tffunctions.h */,
+				30525CBC210BB32300ADEDA1 /* tffunctions.c */,
 			);
 			path = Pong;
+			sourceTree = "<group>";
+		};
+		30525CB5210BA98900ADEDA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309D4C4021101144001C3039 /* SDL2_mixer.framework */,
+				30525CB7210BA98A00ADEDA1 /* SDL2_ttf.framework */,
+				30525CB6210BA98A00ADEDA1 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30525CBE210BDE9500ADEDA1 /* Assetts */ = {
+			isa = PBXGroup;
+			children = (
+				30525CBF210BDF2400ADEDA1 /* Px437_IBM_VGA9.ttf */,
+				309D4C3F2110112D001C3039 /* goal.wav */,
+				309D4C432110B0DB001C3039 /* padhit.wav */,
+				309D4C422110B0DB001C3039 /* tophit.wav */,
+			);
+			path = Assetts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30525CAC210BA7CA00ADEDA1 /* main.c in Sources */,
+				30525CB4210BA80600ADEDA1 /* sys.c in Sources */,
+				30525CBD210BB32300ADEDA1 /* tffunctions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +289,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D54ZHB8K4R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +302,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D54ZHB8K4R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
