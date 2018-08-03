@@ -3,9 +3,9 @@
 #define sys_h
 
 #include <SDL2/SDL.h>
-#include <SDL2_ttf/SDL_ttf.h>
-#include <SDL2_mixer/SDL_mixer.h>
-#include "tffunctions.h"
+#include <SDL2/SDL_ttf.h>    // when I did a linux install of SDL2_ttf, my package manager installed it under /usr/include/SDL2/
+#include <SDL2/SDL_mixer.h>  // when I did a linux install of SDL2_mixer, my package manager installed it under /usr/include/SDL2/
+#include "tffunctions.h" // I don't think you use anything from tffunctions.h in this file or sys.c, so I would only include it in main.c
 
 // Window Options
 #define WINDOWNAME		"Pong"
